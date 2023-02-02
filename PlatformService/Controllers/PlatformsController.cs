@@ -26,7 +26,7 @@ namespace PlatformService.Controllers
         public ActionResult<IEnumerable<PlatformReadDto>> GetAll()
         {
             var items = _repository.GetAllPlatforms();
-            // return Ok(new { total = items.Count(), data = items });
+            //return Ok(new { total = items.Count(), data = items });
             return Ok(_mapper.Map<IEnumerable<PlatformReadDto>>(items));
         }
 
