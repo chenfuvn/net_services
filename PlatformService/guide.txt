@@ -1,0 +1,15 @@
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.InMemory
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+docker build -t phuctran87/platformservice .
+
+docker run -p 8080:80 -d phuctran87/platformservice
+
+docker ps
+docker stop [79449a703bd2]
+docker start [79449a703bd2]
+
+docker push phuctran87/platformservice
