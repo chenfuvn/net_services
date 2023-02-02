@@ -1,0 +1,19 @@
+--deployment
+kubectl version
+
+kubectl apply -f platforms-depl.yaml
+
+kubectl get deployments
+
+kubectl get pods
+
+## if delete deployment
+kubectl delete deployment platforms-depl
+
+--nodeport service
+kubectl apply -f platforms-np-srv.yaml
+
+kubectl get services
+
+## if delete service
+kubectl delete service platformnpservice-srv
