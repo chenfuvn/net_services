@@ -3,3 +3,14 @@ dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+#add to file appsetting.Dev json of project Platform
+"CommandService": "http://localhost:6000"
+
+docker build -t phuctran87/commandservice .
+docker tag phuctran87/commandservice phuctran87/commandservice
+
+docker push phuctran87/commandservice
+
+some have change project platformservice
+=> check K8S/guide.txt

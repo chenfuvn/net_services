@@ -17,3 +17,22 @@ kubectl get services
 
 ## if delete service
 kubectl delete service platformnpservice-srv
+
+
+
+### deploy to 2 service => kubenetes
+1 add file commands-depl.yaml
+
+2 in file platform-depl.yaml
+ add:
+ ---
+ apiVersion: v1
+ ......
+
+3 create file "appsetting.Production.json" in project platformservice
+add content: (ipcluster of commandservice)
+{
+   "CommandService": "http://commands-clusterip-srv:80"
+}
+
+4 build and push docker platform project again

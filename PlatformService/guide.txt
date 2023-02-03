@@ -5,6 +5,7 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
 docker build -t phuctran87/platformservice .
+docker tag phuctran87/platformservice phuctran87/platformservice
 
 docker run -p 8080:80 -d phuctran87/platformservice
 
